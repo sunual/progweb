@@ -4,4 +4,8 @@ sub.forEach(sub => {
   top.push(Element.textContent);
 });
 junio = document.querySelector('ul');
-junior.textContent = top;
+top.forEach(top => {
+const item = document.createElement('li');
+item.textContent = top;
+junio.append(item);  
+});
