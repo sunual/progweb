@@ -1,11 +1,11 @@
-const sub = document.querySelectorAll('h2');
-const topi = new Array();
-sub.forEach(sub => {
-  topi.push(Element.textContent);
+const subtitulos = document.querySelectorAll('h2');
+const topicos = new Array();
+subtitulos.forEach(subtitulo => {
+	topicos.push(subtitulo.textContent);
 });
-junio = document.querySelector('ol');
-topi.forEach(topi => {
-const item = document.createElement('li');
-item.textContent = topi;
-junio.append(item);  
+lista = document.querySelector('ol');
+topicos.forEach(topico => {
+	const item = document.createElement('li');
+	item.textContent = topico;
+	lista.append(item);  
 });
