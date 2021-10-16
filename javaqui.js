@@ -1,11 +1,11 @@
 const sub = document.querySelectorAll('h2');
-const top = new Array();
+const topi = new Array();
 sub.forEach(sub => {
-  top.push(Element.textContent);
+  topi.push(Element.textContent);
 });
 junio = document.querySelector('ul');
-top.forEach(top => {
+topi.forEach(topi => {
 const item = document.createElement('li');
-item.textContent = top;
+item.textContent = topi;
 junio.append(item);  
 });
