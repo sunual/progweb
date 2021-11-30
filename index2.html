@@ -1,60 +1,53 @@
-<html>
-  <head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Dever</title>
-  </head>
-  <body>
-    <ul>
-      <li><a href="javascript:document.getElementById('prog').scrollIntoView();">programação</a></li>
-      <li><a href="javascript:document.getElementById('mat').scrollIntoView();">matematica</a></li>
-      <li><a href="javascript:document.getElementById('geo').scrollIntoView();">geografia</a></li>
-    </ul>
-  <ol></ol>
-  </br>
-  </br>
-  <h2 id="prog" class="prog"> Dever programação </h2>
-  <p>python</p>
-  </br>
-  <p>python</p>
-  </br>
-  <p>python</p>
-  </br>
-  <p>python</p>
-  </br>
-  <p>python</p>
-  </br>
-  <h2 id="mat" class="mat"> Dever de matematica </h2> 
-  <p>numeros</p>
-  </br>
-  <p>numeros</p>
-  </br>
-  <p>numeros</p>
-  </br>
-  <p>numeros</p>
-  </br>
-  <p>numeros</p>
-  </br>
-  <h2 id="geo" class="geo"> Dever de geografia </h2>
-  <p>rochas</p>
-  </br>
-  <p>rochas</p>
-  </br>
-  <p>rochas</p>
-  </br>
-  <p>rochas</p>
-  </br>
-  <script>
-    const subtitulos = document.querySelectorAll('h2');
-    const topicos = new Array();
-    subtitulos.forEach(subtitulo => {
-	    topicos.push(subtitulo.textContent);
-    });
-    lista = document.querySelector('ol');
-    topicos.forEach(topico => {
-	    const item = document.createElement('li');
-	    item.textContent = topico;
-	    lista.append(item);  
-    });
-</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select All</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <ol></ol>
+    <h2>Introdução à linguagem JavaScript</h2>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>	
+    <h2>Eventos em JavaScript</h2>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <h2>Document Object Model</h2>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<h2>CSS com JavaScript</h2>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <h2>Networking</h2>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <h2>Armazenamento</h2>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	<p>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <script>
+        const subtitulos = document.querySelectorAll('h2');
+        const topicos = new Array();
+        subtitulos.forEach(subtitulo => {
+            topicos.push(subtitulo.textContent);
+        });
+		var par = 100
+        lista = document.querySelector('ol');
+        topicos.forEach(topico => {
+            const item = document.createElement('li');
+			const boto = document.createElement('button');
+            item.textContent = topico;
+			boto.textContent = 'Direcione-me até ' + topico;
+			boto.onclick = function () {
+				window.scrollTo(0, subtitulos);
+			};
+            lista.append(item);
+			lista.append(boto);
+			par += 300
+        });
+    </script>
 </body>
 </html>
