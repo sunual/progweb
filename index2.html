@@ -136,21 +136,22 @@
             const item = document.createElement('li');
 			const boto = document.createElement('a');
             item.textContent = topico;
-			boto.textContent = 'Direcione-me até ' + topico;
+			//boto.textContent = 'Direcione-me até ' + topico;
+			//boto.setAttribute('name', par)
 			boto.setAttribute('name', par)
-			boto.onclick = function () {
+			item.onclick = function () {
 				if (boto.name == 1) {
-					window.scrollTo(0, 320);
+					window.scrollTo(0, 200);
 				} else if (boto.name == 2) {
-					window.scrollTo(0,980);
+					window.scrollTo(0,870);
 				} else if (boto.name == 3) {
-					window.scrollTo(0,1640);
+					window.scrollTo(0,1520);
 				} else if (boto.name == 4) {
-					window.scrollTo(0,2300); 
+					window.scrollTo(0,2190); 
 				} else if (boto.name == 5) {
-					window.scrollTo(0, 2970);
+					window.scrollTo(0, 2860);
 				} else {
-					window.scrollTo(0,3630);
+					window.scrollTo(0,3520);
 				};
 			};
             lista.append(item);
@@ -158,13 +159,6 @@
 			par+=1
         });
 		
-		 function neymarx() {
-			//if 	(boto.name == 1) {
-				window.scrollTo(0, 50);
-		//	} else {
-		//		window.scrollTo(0,100);
-		//	};
-		};
 		
     </script>
 </body>
