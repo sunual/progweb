@@ -17,7 +17,8 @@
 				return rr.json().then(function (dados) {
 					//atribui('cidades', dados.cities)
 					topicos = dados.cities;
-					lista = document.querySelector('ol');
+					document.querySelector('ol').innerHTML = "";
+					let lista = document.querySelector('ol')
 					topicos.forEach(topico => {
 						const item = document.createElement('li');
 						item.textContent = topico;
